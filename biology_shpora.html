@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпора по Биологии - Редькин Егор</title>
+    <style>
+        :root {
+            --bg-color: #121214;
+            --card-bg: #1e1e24;
+            --accent-color: #4f46e5;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --success: #10b981;
+            --danger: #ef4444;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Огромное приветствие по запросу пользователя */
+        .greeting-banner {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            padding: 40px 20px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+
+        .greeting-banner h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.03); }
+        }
+
+        .section-title {
+            margin: 30px 0 15px;
+            font-size: 1.8rem;
+            color: #a78bfa;
+            border-bottom: 2px solid #374151;
+            padding-bottom: 5px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            color: #6366f1;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 10px;
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .quiz-box {
+            background-color: #1a1a1f;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .options-list {
+            list-style: none;
+            margin-left: 0;
+            margin-top: 15px;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            background-color: #2d2d35;
+            color: var(--text-color);
+            border: 1px solid #4b5563;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .option-btn:hover {
+            background-color: #374151;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            display: none;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .correct {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid var(--success);
+        }
+
+        .wrong {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border: 1px solid var(--danger);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Твоя кастомная надпись -->
+    <div class="greeting-banner">
+        <h1>РЕДЬКИН ЕГОР ДАРОУ</h1>
+    </div>
+
+    <div class="card">
+        <h2>🔥 Твой интерактивный тренажер по Биологии (8 класс)</h2>
+        <p style="color: var(--text-muted); margin-top: 5px;">Параграфы 6 и 7: Ткани, органы и системы органов.</p>
+    </div>
+
+    <div class="section-title">Параграф 6. Ткани и органы</div>
+    
+    <div class="card">
+        <h3>1. Эпителиальная ткань</h3>
+        <p><strong>Особенность:</strong> Клетки сидят вплотную, межклеточного вещества почти нет. Быстро обновляется.</p>
+        <p><strong>Где находится:</strong> Кожа, внутренние покровы желудка и кишечника.</p>
+    </div>
+
+    <div class="card">
+        <h3>2. Соединительная ткань</h3>
+        <p><strong>Особенность:</strong> Очень много межклеточного вещества!</p>
+        <p><strong>Разновидности:</strong> Кровь и лимфа (жидкие), кости и хрящи (твердые), жир (запас тепла и энергии).</p>
+    </div>
+
+    <div class="card">
+        <h3>3. Мышечная ткань</h3>
+        <p><strong>Особенности:</strong> Возбудимость и сократимость.</p>
+        <ul>
+            <li><strong>Скелетная:</strong> Управляем сами (руки, ноги).</li>
+            <li><strong>Гладкая:</strong> Работает сама внутри органов (желудок, сосуды).</li>
+            <li><strong>Сердечная:</strong> Только в сердце, работает на автомате.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>4. Нервная ткань</h3>
+        <p><strong>Особенности:</strong> Возбудимость и проводимость. Состоит из нейронов (главные клетки с отростками аксонами и дендритами) и нейроглии (клетки-помощники).</p>
+    </div>
+
+    <div class="section-title">Параграф 7. Системы органов</div>
+
+    <div class="card">
+        <h3>Система vs Аппарат</h3>
+        <p><strong>Система органов:</strong> Сделаны из одинаковых тканей и имеют общий план (например, Нервная система).</p>
+        <p><strong>Аппарат органов:</strong> Органы разные по строению и тканям, но делают одну работу (например, Опорно-двигательный аппарат: кости + мышцы).</p>
+    </div>
+
+    <div class="card">
+        <h3>Нейрогуморальная регуляция</h3>
+        <p><strong>Нервная:</strong> Быстрая, электрическими импульсами через мозг и нервы.</p>
+        <p><strong>Гуморальная:</strong> Медленная, гормонами через кровь.</p>
+        <p>Вместе они поддерживают <strong>гомеостаз</strong> — постоянство внутренней среды организма.</p>
+    </div>
+
+    <div class="section-title">⚡️ Быстрый мини-тест</div>
+
+    <div class="card quiz-box">
+        <h3>Вопрос: Какая ткань содержит очень много межклеточного вещества и бывает как жидкой, так и твердой?</h3>
+        <div class="options-list">
+            <button class="option-btn" onclick="checkAnswer(this, false, 'Неа! В эпителии межклеточного вещества практически нет.')">А) Эпителиальная</button>
+            <button class="option-btn" onclick="checkAnswer(this, true, 'Красава! Кровь (жидкая) и кости (твердые) — это всё соединительная ткань.')">Б) Соединительная</button>
+            <button class="option-btn" onclick="checkAnswer(this, false, 'Мимо! Мышечная ткань состоит из волокон для сокращения.')">В) Мышечная</button>
+        </div>
+        <div id="quiz-feedback" class="feedback"></div>
+    </div>
+
+</div>
+
+<script>
+function checkAnswer(button, isCorrect, text) {
+    const feedback = document.getElementById('quiz-feedback');
+    feedback.style.display = 'block';
+    feedback.innerText = text;
+    
+    if(isCorrect) {
+        feedback.className = 'feedback correct';
+    } else {
+        feedback.className = 'feedback wrong';
+    }
+}
+</script>
+
+</body>
+</html>
